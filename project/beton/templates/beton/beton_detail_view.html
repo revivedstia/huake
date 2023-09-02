@@ -1,0 +1,159 @@
+{% extends 'main/layout.html'%}
+{% load static%}
+
+{% block title %}Бетоносмесители{% endblock %}
+
+{% block contect %}
+
+<h1>{{ beton.ru_title }}</h1>
+<br>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2" id="thead">Характеристики единицы</th>
+            </tr>
+            </thead>
+
+            <tr>
+                <td>Состаяние:</td>
+                <td>{{ beton.state }}</td>
+            </tr>
+            <tr>
+                <td>Двигатель:</td>
+                <td>{{ beton.engine }}</td>
+            </tr>
+
+            {% if beton.transmission %}
+            <tr>
+                <td>Коробка передач:</td>
+                <td>{{beton.transmission}}</td>
+            </tr>
+            {% endif %}
+
+            {% if beton.mixer %}
+            <tr>
+                <td>Колесная база:</td>
+                <td>{{beton.mixer}}</td>
+            </tr>
+            {% endif %}
+
+            {% if beton.direction %}
+            <tr>
+                <td>Скорость движения:</td>
+                <td>{{beton.direction}}</td>
+            </tr>
+            {% endif %}
+
+            {% if beton.stop %}
+            <tr>
+                <td>Тормозная система:</td>
+                <td>{{beton.stop}}</td>
+            </tr>
+            {% endif %}
+
+            {% if beton.water_supply %}
+            <tr>
+                <td>Способ подачи воды:</td>
+                <td>{{beton.water_supply}}</td>
+            </tr>
+            {% endif %}
+
+            {% if beton.lifting %}
+            <tr>
+                <td>Подъемная способность:</td>
+                <td>{{beton.lifting}}</td>
+            </tr>
+            {% endif %}
+
+            {% if beton.tire %}
+            <tr>
+                <td>Размер шин:</td>
+                <td>{{beton.tire}}</td>
+            </tr>
+            {% endif %}
+
+            {% if beton.dimension %}
+            <tr>
+                <td>Габариты:</td>
+                <td>{{beton.dimension}}</td>
+            </tr>
+            {% endif %}
+
+        </table>
+        <a href="/#okno">
+            <button>Узнать цену</button>
+        </a>
+    </div>
+
+    <div class="col-md-auto">
+        <div class="carousel slide" data-ride="carousel" id="slides">
+            <ul class="carousel-indicators slide" style="color: red;">
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="0" class="action"></li>
+                </button>
+                {% if beton.image2 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="1"></li>
+                </button>
+                {% endif %}
+                {% if beton.image3 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="2"></li>
+                </button>
+                {% endif %}
+                {% if beton.image4 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="3"></li>
+                </button>
+                {% endif %}
+                {% if beton.image5 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="4"></li>
+                </button>
+                {% endif %}
+            </ul>
+
+            <div class="carousel-inner carousel">
+                <div class="carousel-item active">
+                    <img src="{{ beton.image1.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% if beton.image2 %}
+                <div class="carousel-item">
+                    <img src="{{ beton.image2.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if beton.image3 %}
+                <div class="carousel-item">
+                    <img src="{{ beton.image3.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if beton.image4 %}
+                <div class="carousel-item">
+                    <img src="{{ beton.image4.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if beton.image5 %}
+                <div class="carousel-item">
+                    <img src="{{ beton.image5.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block foot %}
+<h3 class="field_callback_title">Остались вопросы?</h3>
+<p>Оставьте заявку на главной странице и мы вам перезвоним</p>
+
+<a href="/#okno">
+    <button type="submit">
+        Оставить заявку
+    </button>
+</a>
+{% endblock %}

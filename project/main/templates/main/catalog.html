@@ -1,0 +1,76 @@
+{% extends 'main/layout.html'%}
+{% load static%}
+
+{% block title %}Каталог{% endblock %}
+
+{% block contect %}
+
+<h1 style="padding-bottom: 20px;">Каталог</h1>
+
+
+<form action="/catalog/svayboy" class="category">
+    <button class="cat">
+        <div class="box">
+            <img src="{% static 'main\img\svayboy.jpg'%}" alt="Свойбойная машина">
+        </div>
+        <div class="cap">СВАЕБОЙНЫЕ МАШИНЫ</div>
+        <p>Описание техники</p>
+    </button>
+</form>
+
+<form action="/catalog/pogruz" class="category">
+    <button class="cat">
+        <div class="box">
+            <img src="{% static 'main/img/pogruz.jpg'%}" alt="Погрузчики">
+        </div>
+        <div class="cap">ФРОНТАЛЬНЫЕ ПОГРУЗЧИКИ</div>
+        <p>Описание техники</p>
+    </button>
+</form>
+
+<form action="/catalog/ekskavator" class="category">
+    <button class="cat">
+        <div class="box">
+            <img src="{% static 'main\img\eks.png'%}" alt="Экскаваторы">
+        </div>
+        <div class="cap">ЭКСКАВАТОРЫ-ПОГРУЗЧИКИ</div>
+        <p>Описание техники</p>
+    </button>
+</form>
+
+<form action="/catalog/vil_pogruz" class="category">
+    <button class="cat">
+        <div class="box">
+            <img src="{% static 'main\img\vil_pogruz.png'%}" alt="Вилочные погрузчики">
+        </div>
+        <div class="cap">ВИЛОЧНЫЕ ПОГРУЗЧИКИ</div>
+        <p>Описание техники</p>
+    </button>
+</form>
+
+<form action="/catalog/beton" class="category">
+    <button class="cat">
+        <div class="box">
+            <img src="{% static 'main\img\HK-ZSL-4500.jpg'%}" alt="Бетоносместели">
+        </div>
+        <div class="cap">БЕТОНОСМЕСИТЕЛИ</div>
+        <p>Самоходные бетоносмесилели с самозагрузкой</p>
+    </button>
+</form>
+
+<p><a name="call"></a></p>
+{% endblock %}
+
+
+{% block foot %}
+<h3 class="field_callback_title">Остались вопросы?</h3>
+<p>Оставьте заявку на главной странице и мы вам перезвоним</p>
+
+<a href="/#okno">
+    <button type="submit">
+        Оставить заявку
+    </button>
+</a>
+{% endblock %}
+
+

@@ -1,0 +1,115 @@
+.close_panel {
+	color: #fff;
+}
+
+.close_panel:hover {
+	color: #222;
+}
+
+.topnav {
+    background-color: #ff6600;
+}
+
+.topnav a {
+    color: #f2f2f2;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #c9580c;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #bb4400;
+    color: white;
+}
+
+#botnav a{
+    color: #666;
+}
+
+#botnav a:hover{
+    color: #c9580c;
+}
+
+.ico {
+    color: #ff6600;
+}
+
+
+#footer {
+    background: #222;
+    color: #f2f2f2;
+}
+
+.socials {
+    color: #ff6600;
+}
+
+.socials:hover {
+    color: #c9580c;
+}
+
+.form-control{
+    background: #333;
+    color:#ff6600;
+    border: 1px solid #333;
+}
+
+.form-control:focus {
+  color: #ddd;
+  border: 1px solid #ff6600;
+  outline: 5px solid #222;
+  background: #333;
+}
+
+#mess:focus {
+  color: #ddd;
+  border: 1px solid #ff6600;
+  outline: 5px solid #222;
+  background: #333;
+}
+
+#pc {color: #ff6600;}
+
+button {
+    color: white;
+    background: #ff6600;
+}
+
+button:hover {
+    background: #c9580c;
+}
+
+button.category {
+    color: #222;
+    background: #fff;
+}
+
+button.cat {
+    background: #eee;
+}
+
+button.cat:hover {
+    background: #f7aa77;
+}
+
+table {
+    background: #eee;
+    border: none;
+    border-radius: 8px;
+}
+
+tr {
+    border-bottom: 2px solid #fff;
+}
+
+tr:hover {
+    background: #e0e0e0;
+}
+
+.slide_b {
+    border: 2px solid #ff6600;
+}
+

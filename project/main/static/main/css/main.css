@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin-top: 1%;
+}
+
+
+#logo {
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 150%;
+}
+
+.header-extras {
+    float: right;
+    position: relative;
+    top: 6px;
+    display: flex;
+    display: inline-block;
+
+    padding:0;
+    margin:0;
+
+    margin-left: 5%;
+    margin-bottom: 5px;
+}
+
+.he-text {
+    margin-bottom: 5px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+span {
+    padding:0;
+    margin: 0;
+}
+
+
+/*ul {list-style: none;}*/
+
+.hat {
+
+}
+
+.topnav {
+    overflow: hidden;
+    padding-left: 2%;
+    width: 100wh;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a{
+    float: left;
+    text-align: center;
+    padding: 1.5% 1%;
+    text-decoration: none;
+    font-size: auto;
+}
+
+#botnav {
+    margin-top: 40px;
+    font-size: 20px;
+    padding-left: 0;
+}
+
+#botnav li{
+    margin-bottom: 10px;
+}
+
+#botnav a{
+    text-decoration: none;
+}
+
+main {
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 25px;
+
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.category{
+    margin-top: 0;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+
+    padding: 0;
+    min-width: 28%;
+    max-width: 80%;
+    height: auto;
+    display: inline-block;
+}
+
+.cat {
+    color: #222;
+    margin: 0;
+}
+
+
+img {
+    width: 100%;
+}
+
+.cap {
+    margin: 2% 0 2%;
+    border-bottom: 2px solid #ff6600;
+    font-size: 25px;
+  }
+
+#footer {
+    padding: 2%;
+    padding-bottom: 5%;
+    flex: 0 0 auto;
+}
+
+#foot-left {
+    float: left;
+    width: 30%;
+
+}
+
+.socials_list {
+    margin-top: 60px;
+}
+
+.socials {
+    margin-right: 10px;
+    padding: 2%;
+    font-size:  40px;
+}
+
+.widget {
+    width: 70%;
+    float: right;
+}
+
+.col-md-4 {padding-top: 10px;}
+
+.form-group {padding-top: 10px;}
+
+#pc {text-decoration: none;}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.image_fade {
+    width: 100%;
+}
+
+.svoy {
+    width: 30%;
+}
+
+#field_footer_text {
+    padding-top: 30px;
+    margin-left: 20%;
+}
+
+#info {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.box {
+   position: relative;
+   overflow: hidden;
+   min-width: 25vw;
+   max-width: 90vw;
+   height: 50vh;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.box img {
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   width: 100%;
+   height: 100%;
+   object-fit:cover;
+}
+
+.ban #ban{
+	position: relative;
+	top: -25px;
+	width: 100%; /* for IE 6 */
+}
+
+.ban p {
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 100%;
+	font-size: 30px;
+}
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+td{
+    padding: 2%;
+    text-align: left;
+}
+
+th{
+    padding: 2%;
+}
+
+#slides {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#slides img{
+    height: 85vh;
+}
+
+.none_dec {
+    list-style-type: none;
+}
+
+.slide_b {
+    padding: 0;
+    margin-right: 5px;
+}
+
+.cont {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    background: #eee;
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.el {
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+#in_cont {
+    margin: 0;
+}
+
+#last {
+    margin-top: 5%;
+    text-align: center;
+    width: 100wh;
+}
+
+#kurses{
+    background: #eee;
+
+}
+
+.kurs{
+    display: inline-block;
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.carousel{
+    max-width: 90vw;
+    height: auto;
+}
+
+#price{
+    margin-bottom: 20px;
+}

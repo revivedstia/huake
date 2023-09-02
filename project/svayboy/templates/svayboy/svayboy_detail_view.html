@@ -1,0 +1,158 @@
+{% extends 'main/layout.html'%}
+{% load static%}
+
+{% block title %}Сваебойные машины{% endblock %}
+
+{% block contect %}
+
+<h1>{{ svayboy.ru_title }}</h1>
+<br>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2" id="thead">Характеристики единицы</th>
+            </tr>
+            </thead>
+
+            <tr>
+                <td>Состаяние:</td>
+                <td>{{ svayboy.state }}</td>
+            </tr>
+            <tr>
+                <td>Двигатель:</td>
+                <td>{{ svayboy.engine }}</td>
+            </tr>
+            <tr>
+                <td>Способ езды:</td>
+                <td>{{ svayboy.do_wya }}</td>
+            </tr>
+
+
+            {% if svayboy.wheels %}
+            <tr>
+                <td>Колесная база:</td>
+                <td>{{svayboy.wheels}}</td>
+            </tr>
+            {% endif %}
+
+            {% if svayboy.p %}
+            <tr>
+                <td>Давление гидравлического насоса:</td>
+                <td>{{svayboy.p}}</td>
+            </tr>
+            {% endif %}
+
+            {% if svayboy.v %}
+            <tr>
+                <td>Скорость движения:</td>
+                <td>{{svayboy.v}}</td>
+            </tr>
+            {% endif %}
+
+            {% if svayboy.fuel %}
+            <tr>
+                <td>Расход топлива:</td>
+                <td>{{svayboy.fuel}}</td>
+            </tr>
+            {% endif %}
+
+            {% if svayboy.power %}
+            <tr>
+                <td>Мощность:</td>
+                <td>{{svayboy.power}}</td>
+            </tr>
+            {% endif %}
+
+            {% if svayboy.mass %}
+            <tr>
+                <td>Масса:</td>
+                <td>{{svayboy.mass}}</td>
+            </tr>
+            {% endif %}
+
+            {% if svayboy.dimension %}
+            <tr>
+                <td>Габариты:</td>
+                <td>{{svayboy.dimension}}</td>
+            </tr>
+            {% endif %}
+
+        </table>
+        <a href="/#okno">
+            <button>Узнать цену</button>
+        </a>
+    </div>
+
+    <div class="col-md-auto">
+        <div class="carousel slide" data-ride="carousel" id="slides">
+            <ul class="carousel-indicators">
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="0" class="action"></li>
+                </button>
+                {% if svayboy.image2 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="1"></li>
+                </button>
+                {% endif %}
+                {% if svayboy.image3 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="2"></li>
+                </button>
+                {% endif %}
+                {% if svayboy.image4 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="3"></li>
+                </button>
+                {% endif %}
+                {% if svayboy.image5 %}
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="4"></li>
+                </button>
+                {% endif %}
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ svayboy.image1.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% if svayboy.image2 %}
+                <div class="carousel-item">
+                    <img src="{{ svayboy.image2.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if svayboy.image3 %}
+                <div class="carousel-item">
+                    <img src="{{ svayboy.image3.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if svayboy.image4 %}
+                <div class="carousel-item">
+                    <img src="{{ svayboy.image4.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if svayboy.image5 %}
+                <div class="carousel-item">
+                    <img src="{{ svayboy.image5.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block foot %}
+<h3 class="field_callback_title">Остались вопросы?</h3>
+<p>Оставьте заявку на главной странице и мы вам перезвоним</p>
+
+<a href="/#okno">
+    <button type="submit">
+        Оставить заявку
+    </button>
+</a>
+{% endblock %}

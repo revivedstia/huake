@@ -1,0 +1,46 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Контакты{% endblock %}
+
+{% block contect %}
+<h1>Контакты</h1>
+<div class="cont">
+    <div class="el">
+        <h4>Наш телефон</h4>
+        <p>+7 (963)-814-84-34</p>
+    </div>
+    <div class="el">
+        <h4>Наша почта</h4>
+        <p>huake@inbox.ru</p>
+    </div>
+    <div class="el">
+        <h4>Вы так же можете связаться с нами <br>через наши социальные сети</h4>
+        <div class="socials_list topmargin" id="in_cont">
+            <a href="https://wa.me/89638148434" class="socials "><i class="bi bi-whatsapp"></i></a>
+            <a href="https://web.telegram.org/a/#5682719224" class="socials "><i
+                    class="bi bi-telegram"></i></a>
+        </div>
+    </div>
+    <div class="el">
+        <h4>Часы работы:</h4>
+        <p>с 9:00 до 20:00 С понедельника по пятницу</p>
+    </div>
+    <div class="el">
+        <h4>Адрес</h4>
+        <p>Амурская обл., г. Благовещенск, ул. 50 лет Октября, 232А</p>
+    </div>
+</div>
+{% endblock %}
+
+
+
+{% block foot %}
+<h3 class="field_callback_title">Остались вопросы?</h3>
+<p>Оставьте заявку на главной странице и мы вам перезвоним</p>
+
+<a href="/#okno">
+    <button type="submit">
+        Оставить заявку
+    </button>
+</a>
+{% endblock %}

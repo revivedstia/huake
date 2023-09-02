@@ -1,0 +1,173 @@
+{% extends 'main/layout.html'%}
+{% load static%}
+
+{% block title %}Экскаваторы{% endblock %}
+
+{% block contect %}
+
+<h1>{{ eksksvator.ru_title }}</h1>
+<br>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2" id="thead">Характеристики единицы</th>
+            </tr>
+            </thead>
+
+            <tr>
+                <td>Состаяние:</td>
+                <td>{{ ekskavator.state }}</td>
+            </tr>
+            <tr>
+                <td>Двигатель:</td>
+                <td>{{ ekskavator.engine }}</td>
+            </tr>
+            <tr>
+                <td>Глубина:</td>
+                <td>{{ ekskavator.depth }}</td>
+            </tr>
+            <tr>
+                <td>Высота разгрузки:</td>
+                <td>{{ ekskavator.unload_height }}</td>
+            </tr>
+
+            <tr>
+                <td>Максимальная высота разгрузки:</td>
+                <td>{{ ekskavator.m_unload_height }}</td>
+            </tr>
+
+            <tr>
+                <td>Максимальная дальность разгрузки:</td>
+                <td>{{ ekskavator.m_unload_range }}</td>
+            </tr>
+
+
+            {% if ekskavator.category %}
+            <tr>
+                <td>Разряд:</td>
+                <td>{{ekskavator.category}}</td>
+            </tr>
+            {% endif %}
+
+            {% if ekskavator.wheels %}
+            <tr>
+                <td>Колесная база:</td>
+                <td>{{ekskavator.wheels}}</td>
+            </tr>
+            {% endif %}
+
+            {% if ekskavator.v %}
+            <tr>
+                <td>Скорость движения:</td>
+                <td>{{ekskavator.v}}</td>
+            </tr>
+            {% endif %}
+
+            {% if ekskavator.fuel %}
+            <tr>
+                <td>Расход топлива:</td>
+                <td>{{ekskavator.fuel}}</td>
+            </tr>
+            {% endif %}
+
+            {% if ekskavator.power %}
+            <tr>
+                <td>Мощность:</td>
+                <td>{{ekskavator.power}}</td>
+            </tr>
+            {% endif %}
+
+            {% if ekskavator.mass %}
+            <tr>
+                <td>Масса:</td>
+                <td>{{ekskavator.mass}}</td>
+            </tr>
+            {% endif %}
+
+            {% if ekskavator.dimension %}
+            <tr>
+                <td>Габариты:</td>
+                <td>{{ekskavator.dimension}}</td>
+            </tr>
+            {% endif %}
+
+        </table>
+        <a href="/#okno">
+            <button>Узнать цену</button>
+        </a>
+    </div>
+
+    <div class="col-md-auto">
+        <div class="carousel slide" data-ride="carousel" id="slides">
+            <ul class="carousel-indicators slide" style="color: red;">
+                <button class="slide_b">
+                    <li data-target="#slides" data-slide-to="0" class="action"></li>
+                </button>
+                {% if ekskavator.image2 %}
+                    <button class="slide_b">
+                        <li data-target="#slides" data-slide-to="1"></li>
+                    </button>
+                {% endif %}
+                {% if ekskavator.image3 %}
+                    <button class="slide_b">
+                        <li data-target="#slides" data-slide-to="2"></li>
+                    </button>
+                {% endif %}
+                {% if ekskavator.image4 %}
+                    <button class="slide_b">
+                        <li data-target="#slides" data-slide-to="3"></li>
+                    </button>
+                {% endif %}
+                    {% if ekskavator.image5 %}
+                    <button class="slide_b">
+                        <li data-target="#slides" data-slide-to="4"></li>
+                    </button>
+                {% endif %}
+
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ ekskavator.image1.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% if ekskavator.image2 %}
+                <div class="carousel-item">
+                    <img src="{{ ekskavator.image2.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if ekskavator.image3 %}
+                <div class="carousel-item">
+                    <img src="{{ ekskavator.image3.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if ekskavator.image4 %}
+                <div class="carousel-item">
+                    <img src="{{ ekskavator.image4.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+                {% if ekskavator.image5 %}
+                <div class="carousel-item">
+                    <img src="{{ ekskavator.image5.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block foot %}
+<h3 class="field_callback_title">Остались вопросы?</h3>
+<p>Оставьте заявку на главной странице и мы вам перезвоним</p>
+
+<a href="/#okno">
+    <button type="submit">
+        Оставить заявку
+    </button>
+</a>
+{% endblock %}

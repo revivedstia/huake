@@ -1,0 +1,41 @@
+{% extends 'main/layout.html'%}
+{% load static%}
+
+{% block title %}Сваебойные машины{% endblock %}
+
+{% block contect %}
+
+<h1>Сваебойные машины</h1>
+<br>
+
+{% if svayboys %}
+    {% for el in svayboys %}
+            <form action="{% url 'svayboy_detail' el.id %}" class="category">
+                <button class="cat">
+                    <div class="box">
+                        <img src="{{ el.image1.url }}" alt="Свойбойная машина">
+                    </div>
+                    <div class="cap">{{ el.ru_title }}</div>
+                    <p>Описание техники</p>
+                </button>
+            </form>
+    {% endfor %}
+
+{% else %}
+    <p>Эта категория пока пуста</p>
+{% endif%}
+
+{% endblock %}
+
+
+
+{% block foot %}
+<h3 class="field_callback_title">Остались вопросы?</h3>
+<p>Оставьте заявку на главной странице и мы вам перезвоним</p>
+
+<a href="/#okno">
+    <button type="submit">
+        Оставить заявку
+    </button>
+</a>
+{% endblock %}
