@@ -29,13 +29,15 @@ def index(request):
 
 
 def about(request):
-    data = call(request)
-    return render(request, 'main/about.html', data)
+    return render(request, 'main/about.html')
 
 
 def contacts(request):
-    data = call(request)
-    return render(request, 'main/contacts.html', data)
+    return render(request, 'main/contacts.html')
+
+
+def politic(request):
+    return render(request, 'main/politic.html')
 
 # def catalog(request):
 #     # data = call(request)
