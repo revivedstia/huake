@@ -28,7 +28,7 @@ SECURE_SSL_REDIRECT = False
 
 SESSION_COOKIE_SECURE = True    
 
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
