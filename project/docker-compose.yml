@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  huake-site:
+    build: "."
+    restart: "always"
+
+    ports:
+      - 8888:8888
+  
+    volumes:
+      - huake-app:/app
+
+volumes:
+  huake-app:
