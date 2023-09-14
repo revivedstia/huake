@@ -30,7 +30,7 @@ SESSION_COOKIE_SECURE = False
 
 CSRF_COOKIE_SECURE = False
 
-STATIC_ROOT = False
+STATIC_ROOT = '/home/rober/huake/project/static'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
