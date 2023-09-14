@@ -30,6 +30,8 @@ SESSION_COOKIE_SECURE = False
 
 CSRF_COOKIE_SECURE = False
 
+STATIC_ROOT = False
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
